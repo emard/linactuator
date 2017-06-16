@@ -1,5 +1,5 @@
 podizac_xy=20;
-podizac_h=30;
+podizac_h=32;
 
 sarafi_xy=15;
 sarafi_navoj_d=2.0; // rupa za navoj sarafa
@@ -13,9 +13,12 @@ rez_h=6; // dužina odrezanog dijela
 rez_d=2; // veličina samog reza
 
 matica_d=6;  // veličina 6-kutne rupe za maticu = otvor ključa
-matica_h=15; // dužina rupe za 2 matice
+matica_h=21; // dužina rupe za 2 matice
 
 sipka_d=5; // rupa za navojnu šipku, dosta lufta
+
+gore=1; // napravi gornji dio
+dolje=1; // napravi donji dio
 
 union()
 {
@@ -41,16 +44,35 @@ union()
             cylinder(d=sarafi_prolaz_d,h=rez_h+0.001,$fn=50,center=true);
   
         }
-      // rez donjeg dijela polovice
+      // rez koji odvaja 2 dijela polovice
       translate([0,0,-podizac_h/2+rez_h])
         cube([podizac_xy,podizac_xy,rez_d],center=true);
+
+      // skorz uklonit donji dio
+      if( dolje == 0 )
+      {
+        translate([0,0,-podizac_h/2+rez_h/2])
+          cube([podizac_xy,podizac_xy,rez_h+0.001],center=true);
+      }
+
+      // skorz uklonit gornji dio
+      if( gore == 0 )
+      {
+        translate([0,0,-krug_h-rez_h+(podizac_h+krug_h-rez_h)/2])
+          cube([podizac_xy,podizac_xy,(podizac_h+krug_h-rez_h)+0.001],center=true);
+      }
+
       // rupa za navojnu šipku
       cylinder(d=sipka_d,h=2*podizac_h,$fn=50,center=true);
       // 6-kutna rupa za matice
-      translate([0,0,-podizac_h/2+rez_h+matica_h/2])
+      translate([0,0,(-podizac_h/2+rez_h)+matica_h/2])
         cylinder(d=matica_d*2/sqrt(3),h=matica_h+0.001,$fn=6,center=true);
     }
   }
 }
 
 
+if(0)
+{
+
+}
