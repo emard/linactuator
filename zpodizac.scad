@@ -1,21 +1,21 @@
-podizac_xy=20;
-podizac_h=32;
+podizac_xy=17;
+podizac_h=30;
 
-sarafi_xy=15;
+sarafi_xy=11;
 sarafi_navoj_d=2.0; // rupa za navoj sarafa
 sarafi_prolaz_d=3.0;
 sarafi_h=10; // dubina rupe za saraf
 
-krug_d=12;
+krug_d=10;
 krug_h=2;
 
-rez_h=6; // dužina odrezanog dijela
-rez_d=2; // veličina samog reza
+rez_h=4; // dužina odrezanog dijela
+rez_d=0.1; // veličina samog reza
 
-matica_d=6;  // veličina 6-kutne rupe za maticu = otvor ključa
+matica_d=7;  // veličina 6-kutne rupe za maticu = otvor ključa
 matica_h=21; // dužina rupe za 2 matice
 
-sipka_d=5; // rupa za navojnu šipku, dosta lufta
+sipka_d=5.5; // rupa za navojnu šipku, dosta lufta
 
 gore=1; // napravi gornji dio
 dolje=1; // napravi donji dio
@@ -58,7 +58,7 @@ union()
       // skorz uklonit gornji dio
       if( gore == 0 )
       {
-        translate([0,0,-krug_h-rez_h+(podizac_h+krug_h-rez_h)/2])
+        translate([0,0,-podizac_h/2+rez_h+(podizac_h+krug_h-rez_h)/2])
           cube([podizac_xy,podizac_xy,(podizac_h+krug_h-rez_h)+0.001],center=true);
       }
 
