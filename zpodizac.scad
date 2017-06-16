@@ -4,7 +4,7 @@ podizac_h=30;
 sarafi_xy=11;
 sarafi_navoj_d=2.0; // rupa za navoj sarafa
 sarafi_prolaz_d=3.0;
-sarafi_h=10; // dubina rupe za saraf
+// sarafi_h=10; // dubina rupe za saraf
 
 krug_d=10;
 krug_h=2;
@@ -13,7 +13,7 @@ rez_h=4; // dužina odrezanog dijela
 rez_d=0.1; // veličina samog reza
 
 matica_d=7;  // veličina 6-kutne rupe za maticu = otvor ključa
-matica_h=21; // dužina rupe za 2 matice
+matica_h=20.2; // dubina rupe za 2 matice (svaka 10 mm)
 
 sipka_d=5.5; // rupa za navojnu šipku, dosta lufta
 
