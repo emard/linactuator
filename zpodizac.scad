@@ -1,5 +1,8 @@
+gore=1; // napravi gornji dio
+dolje=1; // napravi donji dio
+
 podizac_xy=17;
-podizac_h=30;
+podizac_h=26;
 
 sarafi_xy=11;
 sarafi_navoj_d=2.0; // rupa za navoj sarafa
@@ -13,12 +16,10 @@ rez_h=4; // dužina odrezanog dijela
 rez_d=0.1; // veličina samog reza
 
 matica_d=7;  // veličina 6-kutne rupe za maticu = otvor ključa
-matica_h=20.2; // dubina rupe za 2 matice (svaka 10 mm)
-
+matica_h=16.2; // dubina rupe za 2 matice (svaka 10 mm)
+prijelaz_h=1; // konusni 6-kutni prijelaz od matice prema rupi
 sipka_d=5.5; // rupa za navojnu šipku, dosta lufta
 
-gore=1; // napravi gornji dio
-dolje=1; // napravi donji dio
 
 union()
 {
@@ -64,9 +65,15 @@ union()
 
       // rupa za navojnu šipku
       cylinder(d=sipka_d,h=2*podizac_h,$fn=50,center=true);
+
       // 6-kutna rupa za matice
       translate([0,0,(-podizac_h/2+rez_h)+matica_h/2])
         cylinder(d=matica_d*2/sqrt(3),h=matica_h+0.001,$fn=6,center=true);
+
+      // konusni prijelaz od matice prema rupi,
+      // da ne padnu isprintani slojevi
+      translate([0,0,(-podizac_h/2+rez_h)+matica_h+prijelaz_h/2])
+        cylinder(d1=matica_d*2/sqrt(3),d2=sipka_d,h=prijelaz_h+0.001,$fn=6,center=true);
     }
   }
 }
