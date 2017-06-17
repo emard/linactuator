@@ -15,7 +15,9 @@ krug_h=2;
 rez_h=4; // dužina odrezanog dijela
 rez_d=0.1; // veličina samog reza
 
-matica_d=7;  // veličina 6-kutne rupe za maticu = otvor ključa
+ulaz_matica_h=0.6; // dubina proširenog ulaza za maticu
+ulaz_matica_d=8; // veličina proširenog ulaza
+matica_d=7.2;  // dovoljna veličina 6-kutne rupe za maticu = otvor ključa
 matica_h=16.2; // dubina rupe za 2 matice (svaka 10 mm)
 prijelaz_h=1; // konusni 6-kutni prijelaz od matice prema rupi
 sipka_d=5.5; // rupa za navojnu šipku, dosta lufta
@@ -70,7 +72,11 @@ union()
       translate([0,0,(-podizac_h/2+rez_h)+matica_h/2])
         cylinder(d=matica_d*2/sqrt(3),h=matica_h+0.001,$fn=6,center=true);
 
-      // konusni prijelaz od matice prema rupi,
+      // konusni 6-kutni prošireni ulaz za matice
+      translate([0,0,(-podizac_h/2+rez_h)+ulaz_matica_h/2])
+        cylinder(d1=ulaz_matica_d*2/sqrt(3),d2=matica_d*2/sqrt(3),h=ulaz_matica_h+0.001,$fn=6,center=true);
+
+      // konusni 6-kutni prijelaz od matice prema rupi,
       // da ne padnu isprintani slojevi
       translate([0,0,(-podizac_h/2+rez_h)+matica_h+prijelaz_h/2])
         cylinder(d1=matica_d*2/sqrt(3),d2=sipka_d,h=prijelaz_h+0.001,$fn=6,center=true);
