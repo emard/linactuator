@@ -15,10 +15,10 @@ krug_h=2;
 rez_h=4; // dužina odrezanog dijela
 rez_d=0.1; // veličina samog reza
 
+matica_d=6.5;  // šitina 6-kutne rupe da matica lagano prođe. Matica je široka 6.0 mm
 ulaz_matica_h=0.6; // dubina proširenog ulaza za maticu
-ulaz_matica_d=8; // veličina proširenog ulaza
-matica_d=7.2;  // dovoljna veličina 6-kutne rupe za maticu = otvor ključa. 1 Matica je široka 7.1 mm
-matica_h=20; // dubina rupe za 2 matice i feder (1 matica je dugačka 8.1 mm, neopterećen feder je 8 mm)
+ulaz_matica_d=matica_d+2*ulaz_matica_h; // veličina proširenog ulaza
+matica_h=21.4; // dubina rupe za 2 matice i feder (1 matica je dugačka 8.1 mm, neopterećen feder je 8 mm)
 prijelaz_h=1; // konusni 6-kutni prijelaz od matice prema rupi
 sipka_d=4.5; // rupa za navojnu šipku, dosta lufta
 
