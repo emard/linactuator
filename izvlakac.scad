@@ -1,0 +1,10 @@
+difference()
+{
+  cylinder(d=16,h=8,center=true);
+  union()
+  {
+    cylinder(d=5,h=20,center=true);
+    translate([0,0,3])
+      cylinder(d=9,h=7,center=true);
+  }
+}
