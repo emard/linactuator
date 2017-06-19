@@ -6,7 +6,7 @@ podizac_h=26;
 
 sarafi_xy=11;
 sarafi_navoj_d=2.0; // rupa za navoj sarafa
-sarafi_prolaz_d=3.0;
+sarafi_prolaz_d=3.5;
 // sarafi_h=10; // dubina rupe za saraf
 
 krug_d=10;
