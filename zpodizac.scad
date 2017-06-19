@@ -54,14 +54,14 @@ union()
       if( dolje == 0 )
       {
         translate([0,0,-podizac_h/2+rez_h/2])
-          cube([podizac_xy,podizac_xy,rez_h+0.001],center=true);
+          cube([podizac_xy+0.001,podizac_xy+0.001,rez_h+0.001],center=true);
       }
 
       // skorz uklonit gornji dio
       if( gore == 0 )
       {
         translate([0,0,-podizac_h/2+rez_h+(podizac_h+krug_h-rez_h)/2])
-          cube([podizac_xy,podizac_xy,(podizac_h+krug_h-rez_h)+0.001],center=true);
+          cube([podizac_xy+0.001,podizac_xy+0.001,(podizac_h+krug_h-rez_h)+0.001],center=true);
       }
 
       // rupa za navojnu šipku
