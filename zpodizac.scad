@@ -1,11 +1,11 @@
 gore=1; // napravi gornji dio
-dolje=1; // napravi donji dio
+dolje=0; // napravi donji dio
 
 podizac_xy=17;
 podizac_h=26;
 
 sarafi_xy=11;
-sarafi_navoj_d=2.0; // rupa za navoj sarafa
+sarafi_navoj_d=2.3; // rupa za navoj sarafa
 sarafi_prolaz_d=3.5;
 // sarafi_h=10; // dubina rupe za saraf
 
@@ -17,11 +17,10 @@ rez_d=0.1; // veličina samog reza
 
 ulaz_matica_h=0.6; // dubina proširenog ulaza za maticu
 ulaz_matica_d=8; // veličina proširenog ulaza
-matica_d=7.2;  // dovoljna veličina 6-kutne rupe za maticu = otvor ključa
-matica_h=16.2; // dubina rupe za 2 matice (svaka 10 mm)
+matica_d=7.2;  // dovoljna veličina 6-kutne rupe za maticu = otvor ključa. 1 Matica je široka 7.1 mm
+matica_h=20; // dubina rupe za 2 matice i feder (1 matica je dugačka 8.1 mm, neopterećen feder je 8 mm)
 prijelaz_h=1; // konusni 6-kutni prijelaz od matice prema rupi
-sipka_d=5.5; // rupa za navojnu šipku, dosta lufta
-
+sipka_d=4.5; // rupa za navojnu šipku, dosta lufta
 
 union()
 {
@@ -82,10 +81,4 @@ union()
         cylinder(d1=matica_d*2/sqrt(3),d2=sipka_d,h=prijelaz_h+0.001,$fn=6,center=true);
     }
   }
-}
-
-
-if(0)
-{
-
 }
