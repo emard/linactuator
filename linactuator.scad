@@ -1,5 +1,6 @@
 gore=1; // napravi gornji dio
 dolje=0; // napravi donji dio
+presjek=0; // vizualiziraj unutrasnjost
 
 podizac_xy=17;
 
@@ -79,6 +80,11 @@ union()
       // da ne padnu isprintani slojevi
       translate([0,0,(-podizac_h/2+rez_h)+matica_h+prijelaz_h/2])
         cylinder(d1=matica_d*2/sqrt(3),d2=sipka_d,h=prijelaz_h+0.001,$fn=6,center=true);
+      
+      // kocka za presjek radi vizualizacije unutrasnjosti
+      if(presjek)
+      translate([podizac_xy/2,0,0])
+      cube([podizac_xy,podizac_xy+0.01,podizac_h*2],center=true);
     }
   }
 }
