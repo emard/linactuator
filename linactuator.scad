@@ -2,7 +2,6 @@ gore=1; // napravi gornji dio
 dolje=0; // napravi donji dio
 
 podizac_xy=17;
-podizac_h=30;
 
 sarafi_xy=11;
 sarafi_navoj_d=2.3; // rupa za navoj sarafa
@@ -19,6 +18,7 @@ matica_d=6.5;  // šitina 6-kutne rupe da matica lagano prođe. Matica je širok
 ulaz_matica_h=0.6; // dubina proširenog ulaza za maticu
 ulaz_matica_d=matica_d+2*ulaz_matica_h; // veličina proširenog ulaza
 matica_h=22.4; // dubina rupe za 2 matice i feder (1 matica je dugačka 8.1 mm, neopterećen feder je 8 mm)
+podizac_h=matica_h+7.6;
 sipka_d=4.5; // rupa za navojnu šipku, dosta lufta
 prijelaz_h=matica_d-sipka_d; // visina konusnog 6-kutnog prijelaza od matice prema rupi za šipku da ne padnu slojevi
 
