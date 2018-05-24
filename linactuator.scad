@@ -11,7 +11,7 @@ sarafi_navoj_h=15; // gornja dubina rupe
 sarafi_prolaz_d=2.5; // poklopac
 sarafi_plocice_d=2.1;
 // sarafi_h=10; // dubina rupe za saraf
-sarafi_navod_d_dolje=1.8; // dolje za mali saraf
+sarafi_navoj_d_dolje=1.8; // dolje za mali saraf
 sarafi_navoj_h_dolje=15; // donja dubina rupe
 
 krug_d=10;
