@@ -99,7 +99,7 @@ union()
   }
 }
 
-module spaceri() // english translation of "spaceri"?
+module spacers()
 {
   d=[0.5,1,2];
   for(i = [0:len(d)-1])
@@ -123,5 +123,5 @@ module spaceri() // english translation of "spaceri"?
 }
 
 if(tiles > 0.5)
-    spaceri(); // english translation of "spaceri"?
+    spacers();
 
